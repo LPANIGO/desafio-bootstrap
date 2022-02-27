@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+
+*{
+    font-family: 'Dosis', sans-serif;
+    /* font-size: 1rem; */
+    /*font-weight: 500; */
+}
+
+
+/* SELECTORES DE CLASES */
+
+.bg-almost-light{
+    background-color: #cbd4ce;
+}
+
+.bg-almost-dark {
+    background-color: #141414;
+}
+
+.bg-dark-green {
+	background: #2B3034;
+    
+    /* background: linear-gradient(to top, #003434, #006A6B); */
+}
+
+.btnComprar{
+    width: 70%;
+}
+
+.w-10vw {
+    width: 10vw;
+}
+
+.product-box{
+    border:solid 1px rgb(160, 160, 160) !important; 
+    /* border-radius: 10px; */
+    transition: transform 0.6s;
+}
+
+.product-box:hover{
+    border: solid 1px #85ca05 !important;
+    /* border-radius: 10px; */
+    /* transform: scale(1.1); */
+	cursor: pointer;
+	transition: transform 0.6s;
+}
+
+
+/* SELECTORES DE ID */
+
+#btnComprar {
+    background-color: #85ca05;
+    color: black;
+}
+
+#btnMarcas {
+    background-color: #85ca05;
+}
+
+#logo {
+    height: 10vh;
+}
+
+#cart-icon{
+    height: 4vh;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+} 
+
+#nav-productos{
+    background-color: #2B3034;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+    #nav-productos h2{
+        font-size: 1.4rem;
+    }
+    #nav-productos ul{
+        list-style: none;
+        /* margin: 20px; */
+    }
+
+        #nav-productos ul li{
+            padding: 2px;
+        }
+
+            #nav-productos ul li a{
+                font-size: 1rem;
+                text-decoration: none;
+                color: white;
+                
+            }
+
+#input-spinner{
+    width: 70%;
+}
+
+#btnFinalizarCompra {
+    background-color: #85ca05;
+    text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 768px){
+    #input-spinner{
+        width: 50%;
+    }
+
+    .btnComprar{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #cart-icon{
+        height: 4vh;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    } 
+
+    #input-spinner{
+        width: 80%;
+    }
+
+    #buscador{
+        width: 35vw;
+    }
+
+    .btnComprar{
+        width: 80%;
+    }
+}
