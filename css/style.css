@@ -8,6 +8,34 @@
     /*font-weight: 500; */
 }
 
+footer iframe {
+    width: 90%;
+    height: 40vh;
+    margin: 20px;
+}
+
+footer div ul{
+    list-style: none;
+    padding: 0;
+}
+
+    footer div ul li{
+        margin: 1rem 0;
+    }
+
+        footer div ul li a{
+            text-decoration: none;
+            color: #0DF205;
+        }
+
+footer div h6.maps{
+    margin: 0 20px;
+}
+
+#mainindex{
+    height: 55vh;
+}
+
 
 /* SELECTORES DE CLASES */
 
@@ -19,7 +47,7 @@
     background-color: #141414;
 }
 
-.bg-dark-green {
+.bg-dark-grey {
 	background: #2B3034;
     
     /* background: linear-gradient(to top, #003434, #006A6B); */
@@ -104,17 +132,12 @@
     text-align: center;
 }
 
+#btngrad {
+    background-image: linear-gradient(to left, #11998e, #38ef7d);
+}
+
 /* MEDIA QUERY */
 
-@media only screen and (min-width: 768px){
-    #input-spinner{
-        width: 50%;
-    }
-
-    .btnComprar{
-        width: 50%;
-    }
-}
 
 @media only screen and (min-width: 1024px){
     #cart-icon{
@@ -124,15 +147,8 @@
         right: 40px;
     } 
 
-    #input-spinner{
-        width: 80%;
-    }
-
     #buscador{
         width: 35vw;
     }
-
-    .btnComprar{
-        width: 80%;
-    }
+    
 }

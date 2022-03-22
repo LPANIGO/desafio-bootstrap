@@ -1,205 +1,269 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="img/turing.ico">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Mi estilo -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Mi icono -->
+    <link rel="icon" href="img/turing.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
 
-        <title>Turing computación</title>
-    </head>
-    <body class="grid template-areas-productos">
+    <title>Turing computación</title>
+</head>
+<body class="grid template-areas-productos">
 
-        <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-almost-dark sticky-top">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand ms-4  ms-lg-1" href="index.html">
-                            <img src="img/logo-turing.png" class="mt-1" alt="logo turing" id="logo">
-                        </a>
-                        <ul class="navbar-nav ms-4 me-5 mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
-                                </a>
-                                <ul id="menu" class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    
-                                </ul>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li> -->
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" id="buscador" type="search" placeholder="Eso que querés, buscalo acá" aria-label="Search">
-                            <button class="btn btn-outline-success" id="boton-buscar" type="submit">Search</button>
-                        </form>
-                    </div>
-                    <a href="carrito.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="cart-icon" fill="white" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-almost-dark sticky-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand ms-4  ms-lg-1" href="index.html">
+                        <img src="img/logo-turing.png" class="mt-1" alt="logo turing" id="logo">
                     </a>
-                </div>
-            </nav>
-        </header>
-
-
-        <main >
-            <div class="p-4">   
-                <h1 class="text-center">Mi carrito</h1>
-                <table class="table ">
-                    <thead>
-                    <tr class="table-light">
-                        <th scope="col">#</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Precio unitario</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                    </thead>
-                    
-                    <tbody id="mi-carrito">
-                        <tr> 
-                            <th class="text-center py-4" scope="row" colspan="6">Tu carrito de productos está vacío</th>
-                        </tr>
-                        <tr class="table-dark"> 
-                            <th scope="row" colspan="3"></th> 
-                            <td class="fs-4" >Total carrito</td> 
-                            <td class="fs-4 text-center" colspan="2">$0</td> 
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="d-flex justify-content-end pe-5 me-5">
-                    <button id="btnFinalizarCompra" class="btn fs-4 text-end" type="button">Finalizar compra</button>
-                </div>
-            </div>          
-        </main>
-    
-        <footer class="text-center text-lg-start bg-almost-dark text-muted pt-2">
-            
-        
-            <!-- Section: Links  -->
-            <section class="bg-almost-dark text-white">
-                <div class="container text-center text-md-start">
-                    <!-- Grid row -->
-                    <div class="row">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
-                            </h6>
-                            <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-                
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                            </h6>
-                            <p>
-                            <a href="#!" class="text-reset">Angular</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">React</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">Vue</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">Laravel</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-                
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                            </h6>
-                            <p>
-                            <a href="#!" class="text-reset">Pricing</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">Settings</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">Orders</a>
-                            </p>
-                            <p>
-                            <a href="#!" class="text-reset">Help</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-                
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                            </h6>
-                            <ul>
-                                <li>
-                                    <a href="https://wa.me/<5493513533836>" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                                        </svg> tel: 0000-000000
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:leopanigo@gmail.com?Subject=Consulta%20a%20Turing">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-open" viewBox="0 0 16 16">
-                                            <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z"/>
-                                        </svg> turing@gmail.com
-                                    </a>
-                                </li>
-                                <li>Para soporte haz <a href="#">click aquí</a></li>
+                    <ul class="navbar-nav ms-4 me-5 mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul id="menu" class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="productos.html">Todos</a></li>
+                                <li><a class="dropdown-item" href="#">Microproceadores</a></li>
+                                <li><a class="dropdown-item" href="#">Motherboards</a></li>
+                                <li><a class="dropdown-item" href="#">Dicos solidos</a></li>
+                                <li><a class="dropdown-item" href="#">Memorias RAM</a></li>
+                                <li><a class="dropdown-item" href="#">Fuentes de alimentacion</a></li>
                             </ul>
-                        </div>
-                    <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" id="buscador" type="search" placeholder="Eso que querés, buscalo acá" aria-label="Search">
+                        <button class="btn btn-outline-success" id="boton-buscar" type="submit">Search</button>
+                    </form>
                 </div>
-            </section class="bg-dark-green text-white">
-            <!-- Section: Links  -->
-        
-            <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                <a href="carrito.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="cart-icon" fill="white" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>
+                </a>
             </div>
-            <!-- Copyright -->
-        </footer>
+        </nav>
+    </header>
 
 
+    <main >
+        <div class="p-4">   
+            <h1 class="text-center">Mi carrito</h1>
+            <table class="table ">
+                <thead>
+                <tr class="table-light">
+                    <th scope="col">#</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio unitario</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Eliminar unid.</th>
+                </tr>
+                </thead>
+                
+                <tbody id="mi-carrito">
 
+                <tr id="tr1" class="table-secondary"> 
+                    <th scope="row">1</th> 
+                    <td><img class="w-10vw" src="./img/micros/microprocesador-amd-ryzen-5-3600-42ghz-wraith-stealth-s-g-zen2.jpg" alt="MICROPROCESADOR AMD RYZEN 5 3600 4.2GHZ WRAITH STEALTH S/G ZEN2 AM4"></td> 
+                    <td>MICROPROCESADOR AMD RYZEN 5 3600 4.2GHZ WRAITH STEALTH S/G ZEN2 AM4</td> 
+                    <td>$ 35000</td> 
+                    <td>1</td> 
+                    <td>$ 35000</td>
+                    <td>
+                        <button id="dlt1" class="btn btn-outline-dark fs-4 " type="button"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+                            </svg>
+                        </button>
+                    </td>  
+                </tr><tr id="tr8" class="table-secondary"> 
+                    <th scope="row">3</th> 
+                    <td><img class="w-10vw" src="./img/micros/microprocesador-intel-pentium-gold-g6400-s1200.jpg" alt="MICROPROCESADOR INTEL PENTIUM GOLD G6400 S1200"></td> 
+                    <td>MICROPROCESADOR INTEL PENTIUM GOLD G6400 S1200</td> 
+                    <td>$ 21000</td> 
+                    <td>1</td> 
+                    <td>$ 21000</td>
+                    <td>
+                        <button id="dlt8" class="btn btn-outline-dark fs-4 " type="button"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+                            </svg>
+                        </button>
+                    </td>  
+                </tr><tr id="tr7" class="table-secondary"> 
+                    <th scope="row">4</th> 
+                    <td><img class="w-10vw" src="./img/micros/microprocesador-intel-core-i9-11900k-rocket-lake-8-16-53ghz.jpg" alt="MICROPROCESADOR INTEL CORE I9 11900K ROCKET LAKE 8/16 5.3GHZ"></td> 
+                    <td>MICROPROCESADOR INTEL CORE I9 11900K ROCKET LAKE 8/16 5.3GHZ</td> 
+                    <td>$ 79000</td> 
+                    <td>1</td> 
+                    <td>$ 79000</td>
+                    <td>
+                        <button id="dlt7" class="btn btn-outline-dark fs-4 " type="button"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+                            </svg>
+                        </button>
+                    </td>  
+                </tr><tr id="tr11" class="table-secondary"> 
+                    <th scope="row">5</th> 
+                    <td><img class="w-10vw" src="./img/ssd/1621093335_jduhdsf.png" alt="DISCO DE ESTADO SOLIDO SSD 512GB GIGABYTE M2 NVME 1700MB/S"></td> 
+                    <td>DISCO DE ESTADO SOLIDO SSD 512GB GIGABYTE M2 NVME 1700MB/S</td> 
+                    <td>$ 9299</td> 
+                    <td>1</td> 
+                    <td>$ 9299</td>
+                    <td>
+                        <button id="dlt11" class="btn btn-outline-dark fs-4 " type="button"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+                            </svg>
+                        </button>
+                    </td>  
+                </tr><tr class="table-dark"> 
+                                <th scope="row" colspan="3"></th> 
+                                <td class="fs-4" colspan="2">Total carrito</td> 
+                                <td id="totalFinal" class="fs-4 text-center" colspan="2">$ 212298</td> 
+                            </tr></tbody>
+                
+                
+            </table>
+            <div class="d-flex justify-content-end pe-5 me-5">
+                <button id="btnFinalizarCompra" class="btn fs-4 text-end" type="button">Finalizar compra</button>
+            </div>
+        </div>          
+    </main>
+
+    <footer class="text-center text-lg-start bg-almost-dark text-muted pt-2">
+    
+        <!-- Section: Social media -->
+        <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom border-light bg-almost-dark text-white">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Nustras redes sociales:</span>  
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="bg-almost-dark text-white pt-2">
+            <div class="container-fuid text-center text-md-start px-1">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 ms-2 ms-lg-4">
+                        <i class="fas fa-gem me-3"></i>Turing computación
+                        </h6>
+                        <p class="ms-4">
+                        En nuestra empresa somos apasionados por la informática y la computación, por eso elegimos nuestro nombre en memoria a Alan Turing, uno de los precursores en ciencia de la computación. Nuestro equipo trabaja dia a dia con un servicio rápido y de calidad para ofrecerte los artículos de computación que necesitas.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                        Contact
+                        </h6>
+                        <ul>
+                            <li>
+                                <a href="https://wa.me/<5493513533836>" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                    </svg> tel: 0000-000000
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:leopanigo@gmail.com?Subject=Consulta%20a%20Turing">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-open" viewBox="0 0 16 16">
+                                        <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z"/>
+                                    </svg> turing@gmail.com
+                                </a>
+                            </li>
+                            <li>Para soporte haz <a href="#">click aquí</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 maps">
+                        Maps
+                        </h6>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13629.357958586079!2d-64.25875557411217!3d-31.34960967769018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329eae42c4440b%3A0x473b98d5636193de!2sArguello%2C%20X5021%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1634360369498!5m2!1ses-419!2sar" class="align-self-center" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: #141414;">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://www.linkedin.com/in/leandropanigo/">Leandro Panigo</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
 
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        -->
-        
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    
 
 
-    </body>
+</body>
 </html>
